@@ -102,6 +102,7 @@ address {
 }
 
 .site-nav.list {
+  position: relative;
   margin-left: 93px;
   padding-left: 0;
 }
@@ -119,6 +120,17 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+}
+
+.link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
 }
 
 .site-connect.list {
@@ -141,11 +153,15 @@ address {
 .mailto-icon:hover,
 .mailto-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tell-icon:hover,
 .tell-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .item:last-child {
@@ -167,11 +183,15 @@ address {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .link:hover,
 .site-connect .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link {
@@ -246,9 +266,37 @@ address {
 .button:hover,
 .button:focus {
   background-color: var(--background-color-active);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section */
+
+.item-thumb {
+  position: relative;
+}
+
+.item-thumb-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.item-thumb-text {
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .features-item {
   width: 270px;
@@ -411,12 +459,16 @@ address {
 .team-socialnet-link:hover,
 .team-socialnet-link:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socialnet-link:hover .team-icon,
 .team-socialnet-link:focus .team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
@@ -461,11 +513,15 @@ address {
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:last-child {
@@ -523,6 +579,8 @@ address {
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
@@ -573,12 +631,16 @@ address {
 .socialnet-link:hover,
 .socialnet-link:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialnet-link:hover .team-icon,
 .socialnet-link:focus .team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-team-icon {

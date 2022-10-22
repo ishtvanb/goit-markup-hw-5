@@ -99,6 +99,7 @@ address {
 }
 
 .site-nav.list {
+  position: relative;
   margin-left: 93px;
   padding-left: 0;
 }
@@ -116,6 +117,16 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+}
+.link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 78px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
 }
 
 .site-connect.list {
@@ -138,11 +149,15 @@ address {
 .mailto-icon:hover,
 .mailto-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tell-icon:hover,
 .tell-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item .mailto-icon,
@@ -154,11 +169,15 @@ address {
 .mailto-icon:hover,
 .mailto-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tell-icon:hover,
 .tell-icon:focus {
   fill: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .item:last-child {
@@ -180,11 +199,15 @@ address {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .link:hover,
 .site-connect .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link {
@@ -239,6 +262,8 @@ address {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-list.list {
@@ -278,6 +303,8 @@ address {
 .flex-element:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:nth-last-child(-n + 3) {
@@ -370,6 +397,8 @@ address {
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
@@ -420,12 +449,16 @@ address {
 .socialnet-link:hover,
 .socialnet-link:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialnet-link:hover .team-icon,
 .socialnet-link:focus .team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
