@@ -72,6 +72,18 @@ address {
   width: 1200px;
 }
 
+.header-link {
+  line-height: 1.14;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: "raleway", sans-serif;
   font-weight: 700;
@@ -120,6 +132,9 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.current::after {
@@ -143,27 +158,6 @@ address {
   margin-right: 50px;
 }
 
-.item .mailto-icon,
-.item .tell-icon {
-  vertical-align: middle;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.mailto-icon:hover,
-.mailto-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tell-icon:hover,
-.tell-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .site-connect .item:last-child {
   margin-right: 0px;
 }
@@ -174,6 +168,9 @@ address {
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -183,27 +180,31 @@ address {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .link:hover,
 .site-connect .link:focus {
   color: var(--accent-color);
+}
+
+.item .mailto-icon,
+.item .tell-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link {
-  line-height: 1.14;
+.mailto-icon:hover,
+.mailto-icon:focus {
+  fill: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
+.tell-icon:hover,
+.tell-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* Hero */
@@ -256,18 +257,22 @@ address {
 .button.primary {
   color: var(--white-color);
   background-color: var(--accent-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary {
   color: var(--primary-text-color);
   background-color: var(--secondary-background-color);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus {
   background-color: var(--background-color-active);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section */
@@ -454,27 +459,29 @@ address {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socialnet-link:hover,
 .team-socialnet-link:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-socialnet-link:hover .team-icon,
 .team-socialnet-link:focus .team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
   width: 20px;
   height: 20px;
   fill: var(--current-color);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Clients */
@@ -508,20 +515,19 @@ address {
   border-radius: 4px;
   border: 1px solid var(--current-color);
   background-color: var(--white-color);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
   border: 1px solid var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
   fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:last-child {
@@ -532,6 +538,9 @@ address {
   width: 106px;
   height: 60px;
   fill: var(--current-color);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -570,6 +579,9 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .map-link {
@@ -579,8 +591,6 @@ address {
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
@@ -626,25 +636,27 @@ address {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialnet-link:hover,
 .socialnet-link:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socialnet-link:hover .team-icon,
-.socialnet-link:focus .team-icon {
+.socialnet-link:hover .footer-team-icon,
+.socialnet-link:focus .footer-team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-team-icon {
   width: 20px;
   height: 20px;
   fill: var(--white-color);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

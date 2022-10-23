@@ -69,6 +69,18 @@ address {
   display: flex;
 }
 
+.header-link {
+  line-height: 1.14;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: "raleway", sans-serif;
   font-weight: 700;
@@ -117,7 +129,11 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .link.current::after {
   content: "";
   position: absolute;
@@ -139,47 +155,6 @@ address {
   margin-right: 50px;
 }
 
-.item .mailto-icon,
-.item .tell-icon {
-  vertical-align: middle;
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.mailto-icon:hover,
-.mailto-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tell-icon:hover,
-.tell-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.item .mailto-icon,
-.item .tell-icon {
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.mailto-icon:hover,
-.mailto-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.tell-icon:hover,
-.tell-icon:focus {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .site-connect .item:last-child {
   margin-right: 0px;
 }
@@ -190,6 +165,9 @@ address {
   line-height: 1.4;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -199,27 +177,31 @@ address {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-connect .link:hover,
 .site-connect .link:focus {
   color: var(--accent-color);
+}
+
+.item .mailto-icon,
+.item .tell-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-link {
-  line-height: 1.14;
+.mailto-icon:hover,
+.mailto-icon:focus {
+  fill: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
+.tell-icon:hover,
+.tell-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* Button */
@@ -254,6 +236,9 @@ address {
   border: none;
   color: var(--primary-text-color);
   background-color: var(--secondary-background-color);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -262,8 +247,6 @@ address {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-list.list {
@@ -388,6 +371,9 @@ address {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list .map-link {
@@ -397,8 +383,6 @@ address {
 .footer-list .link:hover,
 .footer-list .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link {
@@ -444,25 +428,27 @@ address {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialnet-link:hover,
 .socialnet-link:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialnet-link:hover .team-icon,
 .socialnet-link:focus .team-icon {
   background-color: var(--accent-color);
   fill: var(--white-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
   width: 20px;
   height: 20px;
   fill: var(--white-color);
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
