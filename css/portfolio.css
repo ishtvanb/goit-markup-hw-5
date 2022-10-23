@@ -281,13 +281,14 @@ address {
 
 .flex-element {
   width: calc((100% - 60px) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .flex-element:nth-last-child(-n + 3) {
@@ -297,6 +298,7 @@ address {
 .flex-element:nth-child(3n) {
   margin-right: 0;
 }
+
 .section {
   margin-top: 0;
   margin-bottom: 0;
