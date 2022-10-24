@@ -283,11 +283,13 @@ address {
   position: relative;
   width: 370px;
   height: 294px;
-  background-color: #2196f3;
 }
 
-.thumb-overlay:hover::before,
-.overlay-text:hover::before {
+.thumb-overlay:hover::before {
+  opacity: 1;
+}
+
+.thumb-overlay:hover .overlay-banner {
   opacity: 1;
 }
 
@@ -300,9 +302,12 @@ address {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay-text {
+.overlay-banner {
   width: 322px;
   height: 168px;
   position: absolute;
@@ -313,7 +318,8 @@ address {
   opacity: 0;
 }
 
-.overlay-content {
+.overlay-text {
+  margin: 0 auto;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.03em;
