@@ -55,6 +55,51 @@ address {
   height: auto;
 }
 
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 1600px;
+  min-height: 1024px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+  background-color: var(--white-color);
+}
+
+.close-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 /* Header */
 
 .header {
